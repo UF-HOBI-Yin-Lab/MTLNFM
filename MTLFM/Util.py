@@ -8,7 +8,7 @@ from model.LR import LR
 
 def seed_torch(seed):
     random.seed(seed)
-    os.environ['PYTHONHASHSEED'] = str(seed)  # 为了禁止hash随机化，使得实验可复现
+    os.environ['PYTHONHASHSEED'] = str(seed)  # for prohibiting hash randomization，and make the experiments reproducible
     np.random.seed(seed)
     torch.manual_seed(seed)
     torch.cuda.manual_seed(seed)
